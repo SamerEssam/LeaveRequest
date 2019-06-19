@@ -42,12 +42,6 @@ namespace WebApplication5.Controllers
             var loggedUserID = User.Identity.GetUserId();
             var requests = db.Requests.Where(a => a.MngrID == loggedUserID).Include("vacType").ToList();
 
-
-
-
-
-
-
             if (requests == null)
             {
                 return NotFound();
